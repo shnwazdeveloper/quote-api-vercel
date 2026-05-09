@@ -39,11 +39,11 @@ const emojiImageCache = new Map()
 // Resolve the font string for a set of styles
 function resolveFont (styles, fontSize) {
   let fontType = ''
-  let fontName = 'NotoSans'
+  let fontName = '"Noto Sans"'
 
   if (styles.includes('bold')) fontType += 'bold '
   if (styles.includes('italic')) fontType += 'italic '
-  if (styles.includes('monospace')) fontName = 'NotoSansMono'
+  if (styles.includes('monospace')) fontName = '"Noto Sans Mono"'
 
   return `${fontType}${fontSize}px ${fontName}`
 }

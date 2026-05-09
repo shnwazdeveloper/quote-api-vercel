@@ -39,4 +39,5 @@ Thumbs.db
 assets/fonts/*
 assets/emojis/*
 !.gitkeep
+!assets/fonts/*.ttf
 .vercel

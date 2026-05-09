@@ -26,8 +26,26 @@ async function loadFonts () {
 
   for (const file of files) {
     if (file.startsWith('.')) continue
+    if (!/\.(ttf|otf|ttc|woff|woff2)$/i.test(file)) continue
+
+    const fontPath = path.join(fontsDir, file)
+    const baseFamily = file.replace(/\.[^/.]+$/, '')
+    const options = [{ family: baseFamily }]
+
+    if (/^NotoSans-Bold/i.test(file)) {
+      options.push({ family: 'NotoSans', weight: '700' }, { family: 'Noto Sans', weight: '700' })
+    } else if (/^NotoSans-Italic/i.test(file)) {
+      options.push({ family: 'NotoSans', style: 'italic' }, { family: 'Noto Sans', style: 'italic' })
+    } else if (/^NotoSansMono/i.test(file)) {
+      options.push({ family: 'NotoSansMono' }, { family: 'Noto Sans Mono' })
+    } else if (/^NotoSans/i.test(file)) {
+      options.push({ family: 'NotoSans' }, { family: 'Noto Sans' })
+    }
+
     try {
-      registerFont(path.join(fontsDir, file), { family: file.replace(/\.[^/.]+$/, '') })
+      for (const option of options) {
+        registerFont(fontPath, option)
+      }
     } catch (error) {
       console.warn(`${file} is not a font file`)
     }

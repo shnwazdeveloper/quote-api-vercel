@@ -217,7 +217,7 @@ module.exports = async (parm) => {
     canvasPicCtx.shadowColor = 'rgba(0, 0, 0, 0)'
 
     canvasPicCtx.fillStyle = 'rgba(0, 0, 0, 0.3)'
-    canvasPicCtx.font = `${8 * scale}px Noto Sans`
+    canvasPicCtx.font = `${8 * scale}px "Noto Sans"`
     canvasPicCtx.textAlign = 'right'
     canvasPicCtx.fillText('@QuotLyBot', canvasPic.width - 25, canvasPic.height - 25)
 
@@ -260,7 +260,7 @@ module.exports = async (parm) => {
     canvasPicCtx.shadowBlur = 0
 
     canvasPicCtx.fillStyle = 'rgba(0, 0, 0, 0.4)'
-    canvasPicCtx.font = `${16 * scale}px Noto Sans`
+    canvasPicCtx.font = `${16 * scale}px "Noto Sans"`
     canvasPicCtx.textAlign = 'center'
     canvasPicCtx.translate(70, canvasPic.height / 2)
     canvasPicCtx.rotate(-Math.PI / 2)
