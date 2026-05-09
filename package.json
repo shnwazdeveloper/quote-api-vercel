@@ -1,5 +1,5 @@
 {
-  "name": "quote-api-vercel",
+  "name": "shnwazdev-quoteapi",
   "version": "0.14.0",
   "description": "Quote image generation API",
   "main": "index.js",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shnwazdeveloper/quote-api-vercel.git"
+    "url": "git+https://github.com/shnwazdeveloper/shnwazdev-quoteapi.git"
   },
   "author": "LyoSU",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shnwazdeveloper/quote-api-vercel/issues"
+    "url": "https://github.com/shnwazdeveloper/shnwazdev-quoteapi/issues"
   },
-  "homepage": "https://github.com/shnwazdeveloper/quote-api-vercel#readme",
+  "homepage": "https://github.com/shnwazdeveloper/shnwazdev-quoteapi#readme",
   "dependencies": {
     "canvas": "^3.2.3",
     "dotenv": "^7.0.0",

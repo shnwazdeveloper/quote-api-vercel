@@ -55,7 +55,7 @@ function apiInfo (ctx) {
   ctx.status = 200
   ctx.body = {
     ok: true,
-    name: 'quote-api-vercel',
+    name: 'shnwazdev-quoteapi',
     status: 'running',
     endpoints: {
       health: `${origin}/health`,
