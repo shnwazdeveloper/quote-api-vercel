@@ -13,7 +13,7 @@ function promiseAllStepN (n, list) {
       })
     })
     function runNext () {
-      if (processed == tail.length) {
+      if (processed === tail.length) {
         resolve(Promise.all(resolved))
       } else {
         resolved.push(tail[processed]().then(x => {

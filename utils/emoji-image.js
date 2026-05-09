@@ -1,6 +1,5 @@
 const path = require('path')
 const fs = require('fs')
-const emojiDb = require('./emoji-db')
 
 const emojiJFilesDir = '../assets/emoji/'
 

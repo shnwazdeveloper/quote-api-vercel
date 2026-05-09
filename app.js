@@ -7,6 +7,7 @@ const Koa = require('koa')
 const { loadFonts } = require('./utils')
 
 const app = new Koa()
+let fontsReady
 
 app.use(logger())
 app.use(responseTime())
@@ -58,11 +59,26 @@ app.use(route.routes())
 
 const port = process.env.PORT || 3000
 
+function prepare () {
+  if (!fontsReady) {
+    fontsReady = loadFonts()
+  }
+  return fontsReady
+}
+
 async function start () {
-  await loadFonts()
+  await prepare()
   app.listen(port, () => {
     console.log('Listening on localhost, port', port)
   })
 }
 
-start()
+if (require.main === module) {
+  start()
+}
+
+module.exports = {
+  app,
+  prepare,
+  start
+}

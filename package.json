@@ -1,5 +1,5 @@
 {
-  "name": "quote-api",
+  "name": "quote-api-vercel",
   "version": "0.14.0",
   "description": "Quote image generation API",
   "main": "index.js",
@@ -13,20 +13,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LyoSU/quote-api.git"
+    "url": "git+https://github.com/shnwazdeveloper/quote-api-vercel.git"
   },
   "author": "LyoSU",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LyoSU/quote-api/issues"
+    "url": "https://github.com/shnwazdeveloper/quote-api-vercel/issues"
   },
-  "homepage": "https://github.com/LyoSU/quote-api#readme",
+  "homepage": "https://github.com/shnwazdeveloper/quote-api-vercel#readme",
   "dependencies": {
-    "canvas": "^2.8.0",
+    "canvas": "^3.2.3",
     "dotenv": "^7.0.0",
     "emoji-db": "^16.0.1",
     "jimp": "^1.6.0",
-    "jsdom": "^16.5.3",
+    "jsdom": "^29.1.1",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.2.1",
     "koa-logger": "^3.2.1",
@@ -36,7 +36,7 @@
     "lru-cache": "^5.1.1",
     "object-sizeof": "^1.6.0",
     "runes": "^0.4.3",
-    "sharp": "^0.32.5",
+    "sharp": "^0.32.6",
     "smartcrop-sharp": "^2.0.7",
     "telegraf": "^3.38.0"
   },

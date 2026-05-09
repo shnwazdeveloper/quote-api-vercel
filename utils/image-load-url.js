@@ -1,7 +1,7 @@
 const https = require('https')
 const http = require('http')
 
-const REQUEST_TIMEOUT_MS = 10_000
+const REQUEST_TIMEOUT_MS = 10000
 const MAX_RESPONSE_BYTES = 20 * 1024 * 1024
 const MAX_REDIRECTS = 5
 
