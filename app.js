@@ -49,11 +49,47 @@ const route = new Router()
 
 const routes = require('./routes')
 
+function apiInfo (ctx) {
+  const origin = ctx.origin
+
+  ctx.status = 200
+  ctx.body = {
+    ok: true,
+    name: 'quote-api-vercel',
+    status: 'running',
+    endpoints: {
+      health: `${origin}/health`,
+      generate: `${origin}/generate`,
+      generatePng: `${origin}/generate.png`,
+      legacyGenerate: `${origin}/quote/generate`,
+      legacyGeneratePng: `${origin}/quote/generate.png`
+    },
+    usage: {
+      method: 'POST',
+      contentType: 'application/json',
+      body: {
+        messages: [
+          {
+            from: { id: 1, name: 'User' },
+            text: 'Hello world'
+          }
+        ]
+      }
+    }
+  }
+}
+
 // Health check endpoint for Docker/Coolify
 route.get('/health', (ctx) => {
   ctx.status = 200
   ctx.body = { status: 'ok', timestamp: Date.now() }
 })
+
+route.get('/', apiInfo)
+route.get('/generate', apiInfo)
+route.get('/generate.png', apiInfo)
+route.get('/quote/generate', apiInfo)
+route.get('/quote/generate.png', apiInfo)
 
 route.use('/*', routes.routeApi.routes())
 
